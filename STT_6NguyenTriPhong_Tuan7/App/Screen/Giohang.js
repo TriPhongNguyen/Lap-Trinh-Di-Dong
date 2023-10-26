@@ -1,5 +1,8 @@
 import { StatusBar } from "expo-status-bar";
+import * as React from 'react';
 import { StyleSheet, Text, View, Pressable, Image } from "react-native";
+import { TouchableOpacity } from "react-native-web";
+
 var arr=[{
     name:'Ca nau mi,nau lau',
     shop:'Devang',
@@ -27,19 +30,21 @@ var arr=[{
 },
 ]
 
-export default function Giohang() {
+export default function Giohang({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image
+        <Pressable onPress={()=>{navigation.navigate('shop')}}><Image
           style={{ width: "24px", height: "24px" }}
           source={require("./../assets/img/ant-design_arrow-left-outlined.png")}
-        />
+        /></Pressable>
+        
         <Text style={{ fontSize: "20px", color: "white" }}>Chat</Text>
-        <Image
+        <TouchableOpacity > <Image
           style={{ width: "24px", height: "24px" }}
           source={require("./../assets/img/bi_cart-check.png")}
-        />
+        /></TouchableOpacity>
+       
       </View>
       <View style={styles.body}>
         <View style={{borderBottomColor:'#C4C4C4', borderBottomWidth:'1px'}}>
