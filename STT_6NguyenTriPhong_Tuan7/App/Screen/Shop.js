@@ -27,6 +27,36 @@ var arr = [
     shop: "Devang",
     img: require("./../assets/img/ca_nau_lau.png"),
   },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
+  {
+    name: "Ca nau mi,nau lau",
+    shop: "Devang",
+    img: require("./../assets/img/ca_nau_lau.png"),
+  },
 ];
 
 export default function Shop({ navigation }) {

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StartScreen from './component/StartScreen'
+import addJob from './component/AddJob';
 import TodoList from './component/TodoList'
 const Stack=createNativeStackNavigator()
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
       <Stack.Navigator>
       <Stack.Screen name='Todolist' component={TodoList}></Stack.Screen>
       <Stack.Screen name='StartScreen' component={StartScreen}></Stack.Screen>
-      
+      <Stack.Screen name='Addjob' component={addJob}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

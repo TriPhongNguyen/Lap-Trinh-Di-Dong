@@ -28,6 +28,36 @@ var arr=[{
     shop:'Devang',
     img:require('./../assets/img/ca_nau_lau.png')
 },
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
+{
+  name: "Ca nau mi,nau lau",
+  shop: "Devang",
+  img: require("./../assets/img/ca_nau_lau.png"),
+},
 ]
 
 export default function Giohang({navigation}) {
@@ -99,10 +129,12 @@ const styles = StyleSheet.create({
     flex: 8,
   },
   footer: {
+    
     flexDirection: "row",
     backgroundColor: "#1BA9FF",
     flex: 1,
     justifyContent: "space-around",
     alignItems: "center",
+   
   },
 });
