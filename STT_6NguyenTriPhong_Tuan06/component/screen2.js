@@ -1,5 +1,5 @@
-import react from "react";
-import * as React from "react";
+import react, { useState } from "react";
+import { useEffect } from "react";
 import {
   View,
   Text,
@@ -10,21 +10,33 @@ import {
   TouchableOpacity,
 } from "react-native";
 const colorSquare = [
-  { MaMau: "#C5F1FB", img: require("./../assets/img/vs_blue.png") },
-  { MaMau: "#F30D0D", img: require("./../assets/img/vs_red.png") },
-  { MaMau: "#000000", img: require("./../assets/img/vs_black.png") },
-  { MaMau: "#234896", img: require("./../assets/img/vs_silver.png") },
+  {
+    MaMau: "#C5F1FB",
+    img: require("./../assets/img/vs_blue.png"),
+    styles: { width: "50px", height: "50px", bgcl: "blue" },
+  },
+  {
+    MaMau: "#F30D0D",
+    img: require("./../assets/img/vs_red.png"),
+    styles: { width: "50px", height: "50px", bgcl: "F30D0D" },
+  },
+  {
+    MaMau: "#000000",
+    img: require("./../assets/img/vs_black.png"),
+    styles: { width: "300px", height: "300px", bgcl: "black" },
+  },
+  {
+    MaMau: "#234896",
+    img: require("./../assets/img/vs_silver.png"),
+    styles: { width: "50px", height: "50px", bgcl: "silver" },
+  },
 ];
 
 const screen2 = ({ navigation, route }) => {
   const [Mau, setMau] = react.useState(null);
   const [anh, setanh] = react.useState(require("./../assets/img/vs_blue.png"));
-  const getMau = (Mau) => {
-    setMau(Mau);
-  };
-  const getAnh = (anh) => {
-    setanh(anh);
-  };
+
+  const handleColorSquarePress = (color) => {};
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -42,21 +54,19 @@ const screen2 = ({ navigation, route }) => {
           <TouchableOpacity
             style={styles.colorChose}
             onPress={() => {
-              getMau(color.MaMau);
-              getAnh(color.img);
+              navigation.navigate("Home", {
+                anhdt: color.img,
+                bgcl: color.styles.bgcl,
+                width:color.styles.width,
+                height:color.styles.height,
+              });
             }}
           >
             <Square key={index} color={color.MaMau} />
           </TouchableOpacity>
         ))}
 
-        <TouchableOpacity style={styles.buttonXong} onPress={()=>{
-            navigation.navigate({
-                name:'Home',
-                params:{anhdt: anh},
-                merge: true,
-            })
-        }}>
+        <TouchableOpacity style={styles.buttonXong} onPress={() => {}}>
           <Text
             style={{ fontSize: "25px", fontWeight: "bold", color: "white" }}
           >

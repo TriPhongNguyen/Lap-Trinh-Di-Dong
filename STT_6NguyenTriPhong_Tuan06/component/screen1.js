@@ -19,11 +19,11 @@ const screen1 = ({ navigation, route }) => {
     }
   },[route.params?.anhdt]);
   return (
-    <View style={styles.container}>
+    <View style={{...styles.container,backgroundColor:route.params.bgcl}}>
       <View style={styles.phone}>
         <Image
           source={route.params?.anhdt||anhdau}
-          style={styles.imgage}
+          style={{...styles.imgage,width:route.params.width,height:route.params.height}}
         ></Image>
         <Text>ĐIỆN THOẠI VSMART - JOY4- HÀNG CHÍNH HÃNG</Text>
       </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flex: "1",
     padding: "20px",
-    backgroundColor: "#fff",
+    
     alignItems: "center",
     justifyContent: "center",
   },
@@ -98,8 +98,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imgage: {
-    width: "341px",
-    height: '306px',
+   
     resizeMode:'contain'
   },
   star: {

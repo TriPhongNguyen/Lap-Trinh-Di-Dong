@@ -10,12 +10,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="ColorChose"
+          component={Screen2}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Home"
           component={Screen1}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="ColorChose" component={Screen2} options={{headerShown:false}} />
+      
       </Stack.Navigator>
     </NavigationContainer>
   );

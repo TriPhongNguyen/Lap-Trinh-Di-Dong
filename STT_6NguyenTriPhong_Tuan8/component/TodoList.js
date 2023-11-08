@@ -13,8 +13,9 @@ import { ScrollView } from "react-native-web";
 
 const url = "https://6544da715a0b4b04436d195d.mockapi.io/joblist";
 
-export default function todoList({navigation}) {
+export default function todoList({ navigation }) {
   var [list, setlist] = useState([]);
+
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
@@ -65,7 +66,7 @@ export default function todoList({navigation}) {
             ></TextInput>
           </View>
         </View>
-        <View style={{alignItems:'center'}}>
+        <View style={{ alignItems: "center" }}>
           <FlatList
             style={{}}
             data={list}
@@ -93,7 +94,7 @@ export default function todoList({navigation}) {
                       {item.Namejob}
                     </Text>
                   </View>
-                  <Pressable >
+                  <Pressable>
                     <Image
                       style={{ width: "24px", height: 24 }}
                       source={require("./../assets/img/Frame2.png")}
@@ -106,9 +107,11 @@ export default function todoList({navigation}) {
         </View>
 
         <View style={{ flex: 1, alignItems: "center" }}>
-          <Pressable onPress={()=>{
-                    navigation.navigate('Addjob')
-                  }}>
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Addjob");
+            }}
+          >
             <Image
               style={{ width: "69px", height: 69 }}
               source={require("./../assets/img/Group 13.png")}
