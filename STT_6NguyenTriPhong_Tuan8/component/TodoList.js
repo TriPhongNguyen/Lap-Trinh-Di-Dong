@@ -13,16 +13,29 @@ import { ScrollView } from "react-native-web";
 
 const url = "https://6544da715a0b4b04436d195d.mockapi.io/joblist";
 
-export default function todoList({ navigation }) {
+export default function todoList({ navigation,route }) {
+
+  
   var [list, setlist] = useState([]);
 
   useEffect(() => {
+
+    
+    
+
+    
     fetch(url)
       .then((response) => response.json())
       .then((json) => {
+        
+        
+
+        return json;
+        
+      }).then((json)=>{
         setlist(json);
       });
-  }, []);
+  }, [route.params?.count]);
   return (
     <ScrollView style={styles.container}>
       <View style={styles.container}>

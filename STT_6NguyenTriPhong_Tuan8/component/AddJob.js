@@ -13,9 +13,10 @@ import { ScrollView } from "react-native-web";
 
 const url = "https://6544da715a0b4b04436d195d.mockapi.io/joblist";
 
-export default function addJob({ navigation }) {
+export default function addJob({ navigation,route }) {
   var [list, setlist] = useState([]);
   var [job, setjob] = useState("");
+  var [count,setcount]=useState(1)
 
   return (
     <ScrollView style={styles.container}>
@@ -51,7 +52,7 @@ export default function addJob({ navigation }) {
         </View>
         <Pressable
           onPress={() => {
-            console.log(job);
+         
             fetch(url, {
               method: "POST",
               body: JSON.stringify({
@@ -62,7 +63,8 @@ export default function addJob({ navigation }) {
                 "Content-type": "application/json; charset=UTF-8",
               },
             })
-            navigation.navigate("Todolist");
+            setcount(count=>count+1)
+            navigation.navigate("Todolist",{count: job});
           }}
           style={{
             justifyContent: "center",
